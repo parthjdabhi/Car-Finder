@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IYt-bX-DP3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kem-9j-ckS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -35,14 +36,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you wan to subscribe car finder feed?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEM-07-5rw">
-                                <rect key="frame" x="20" y="138" width="280" height="63"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-Pe-Ohe">
-                                <rect key="frame" x="21" y="488" width="280" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-Pe-Ohe">
+                                <rect key="frame" x="20" y="488" width="280" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="OnV-7A-XZK"/>
                                 </constraints>
@@ -52,14 +47,25 @@
                                     <action selector="actionSubscribeFeed:" destination="IYt-bX-DP3" eventType="touchUpInside" id="XgX-5N-qyg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Do you wan to subscribe car finder feed?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEM-07-5rw">
+                                <rect key="frame" x="16" y="138" width="288" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eEM-07-5rw" firstAttribute="leading" secondItem="zou-PN-PO4" secondAttribute="leadingMargin" id="2Q7-I9-1w5"/>
                             <constraint firstItem="BEy-Pe-Ohe" firstAttribute="leading" secondItem="zou-PN-PO4" secondAttribute="leading" constant="20" id="5Ko-Ix-8cA"/>
+                            <constraint firstItem="eEM-07-5rw" firstAttribute="trailing" secondItem="zou-PN-PO4" secondAttribute="trailingMargin" id="Guz-Fr-ETa"/>
                             <constraint firstItem="kMI-dm-bvB" firstAttribute="top" secondItem="BEy-Pe-Ohe" secondAttribute="bottom" constant="20" id="H3v-bk-pic"/>
+                            <constraint firstItem="eEM-07-5rw" firstAttribute="top" secondItem="soF-J1-eB1" secondAttribute="bottom" constant="118" id="StY-3w-Jtv"/>
                             <constraint firstAttribute="trailing" secondItem="BEy-Pe-Ohe" secondAttribute="trailing" constant="20" id="cYT-wc-Y2x"/>
+                            <constraint firstItem="eEM-07-5rw" firstAttribute="centerX" secondItem="zou-PN-PO4" secondAttribute="centerX" id="tmm-eZ-7A8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eUo-A0-BK4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="btnSubscribeFeed" destination="BEy-Pe-Ohe" id="HxN-H3-029"/>
@@ -68,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjd-Ci-Tki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="1204"/>
+            <point key="canvasLocation" x="1117" y="1204"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="R0y-oU-Im2">
@@ -87,7 +93,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DB-Yf-mnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752" y="1204"/>
+            <point key="canvasLocation" x="1760" y="1204"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WXL-gb-GIl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kem-9j-ckS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0IN-Wg-biA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IYt-bX-DP3" kind="relationship" relationship="rootViewController" id="1T9-6w-bfR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84p-DU-rCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536" y="1204"/>
         </scene>
     </scenes>
 </document>

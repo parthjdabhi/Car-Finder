@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (3.5.1)
+  - AlamofireSwiftyJSON (0.1.1):
+    - Alamofire (~> 3.4)
+    - SwiftyJSON (~> 2.3)
+  - SVProgressHUD (2.0.3)
+  - SwiftyJSON (2.4.0)
+  - WebBrowser (0.0.8)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - AlamofireSwiftyJSON (~> 0.1)
+  - SVProgressHUD (~> 2.0)
+  - WebBrowser (~> 0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
+  AlamofireSwiftyJSON: 4787ff07c7e6687b787f1723229e729653e3359f
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
+  WebBrowser: d187e245fc8d54a6a754a896039066d95ecebdb5
+
+PODFILE CHECKSUM: 08f143ae67a698f18a3659060453181853f568cb
+
+COCOAPODS: 1.0.1
