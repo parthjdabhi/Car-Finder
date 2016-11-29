@@ -36,6 +36,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let remoteNotification = launchOptions?[UIApplicationLaunchOptionsRemoteNotificationKey] as! [NSObject : AnyObject]? {
                 print(remoteNotification)
                 
+                let alert=UIAlertController(title: "Notification", message: remoteNotification["alert"] as? String ?? "New car arrived in feed", preferredStyle: .Alert);
+                
+                alert.addAction(UIAlertAction(title: "Cancel", style: .Destructive, handler: nil));
+                
+                func yesHandler(actionTarget: UIAlertAction){
+                    print("YES -> !!");
+                    if let feed_data = remoteNotification["feed_data"] as? [String: AnyObject] {
+                        if let link = feed_data["link"] as? String {
+                            openURL(link)
+                        }
+                    }
+                }
+                alert.addAction(UIAlertAction(title: "View", style: .Default, handler: yesHandler));
+                
+                UIApplication.topViewController()?.presentViewController(alert, animated: true, completion: nil)
+                
                 if let applicationIconBadgeNumber:NSInteger? = UIApplication.sharedApplication().applicationIconBadgeNumber {
                     if applicationIconBadgeNumber <= 1 {
                         UIApplication.sharedApplication().applicationIconBadgeNumber = 0
@@ -115,44 +131,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let aps = userInfo["aps"] as! [String: AnyObject]
         print("Aps : ", aps)
         
-        if application.applicationState == .Active {
-            print("Application is already opened")
-            
-            // one input & one button
-            let alert=UIAlertController(title: "Notification", message: aps["alert"] as? String ?? "New car arrived in feed", preferredStyle: .Alert);
-            
-            alert.addAction(UIAlertAction(title: "Cancel", style: .Destructive, handler: nil));
-            
-            func yesHandler(actionTarget: UIAlertAction){
-                print("YES -> !!");
-                if let feed_data = aps["feed_data"] as? [String: AnyObject] {
-                    if let link = feed_data["link"] as? String {
-                        openURL(link)
-                    }
-                }
-            }
-            alert.addAction(UIAlertAction(title: "View", style: .Default, handler: yesHandler));
-            
-            UIApplication.topViewController()?.presentViewController(alert, animated: true, completion: nil)
-            
-            
-        }
-        else if application.applicationState == .Background {
-            print("Application is in Background")
+//        if application.applicationState == .Active {
+//            print("Application is already opened")
+//            
+//            // one input & one button
+//            let alert=UIAlertController(title: "Notification", message: aps["alert"] as? String ?? "New car arrived in feed", preferredStyle: .Alert);
+//            
+//            alert.addAction(UIAlertAction(title: "Cancel", style: .Destructive, handler: nil));
+//            
+//            func yesHandler(actionTarget: UIAlertAction){
+//                print("YES -> !!");
+//                if let feed_data = aps["feed_data"] as? [String: AnyObject] {
+//                    if let link = feed_data["link"] as? String {
+//                        openURL(link)
+//                    }
+//                }
+//            }
+//            alert.addAction(UIAlertAction(title: "View", style: .Default, handler: yesHandler));
+//            
+//            UIApplication.topViewController()?.presentViewController(alert, animated: true, completion: nil)
+//            
+//            
+//        }
+//        else if application.applicationState == .Background {
+//            print("Application is in Background")
+//            if let feed_data = aps["feed_data"] as? [String: AnyObject] {
+//                if let link = feed_data["link"] as? String {
+//                    openURL(link)
+//                }
+//            }
+//        }
+//        else if application.applicationState == .Inactive {
+//            print("Application is Inactive")
+//            if let feed_data = aps["feed_data"] as? [String: AnyObject] {
+//                if let link = feed_data["link"] as? String {
+//                    openURL(link)
+//                }
+//            }
+//        }
+        
+        // one input & one button
+        let alert=UIAlertController(title: "Notification", message: aps["alert"] as? String ?? "New car arrived in feed", preferredStyle: .Alert);
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Destructive, handler: nil));
+        
+        func yesHandler(actionTarget: UIAlertAction){
+            print("YES -> !!");
             if let feed_data = aps["feed_data"] as? [String: AnyObject] {
                 if let link = feed_data["link"] as? String {
                     openURL(link)
                 }
             }
         }
-        else if application.applicationState == .Inactive {
-            print("Application is Inactive")
-            if let feed_data = aps["feed_data"] as? [String: AnyObject] {
-                if let link = feed_data["link"] as? String {
-                    openURL(link)
-                }
-            }
-        }
+        alert.addAction(UIAlertAction(title: "View", style: .Default, handler: yesHandler));
+        
+        UIApplication.topViewController()?.presentViewController(alert, animated: true, completion: nil)
         
         // If your app was running and in the foreground
         // Or

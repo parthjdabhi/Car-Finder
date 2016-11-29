@@ -129,7 +129,6 @@
 				TargetAttributes = {
 					5EFCF4631DE83F990037CB0E = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 8MJC8PBK8R;
 					};
 				};
 			};
@@ -339,12 +338,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dustin Allen (A6CL8S5GN8)";
 				INFOPLIST_FILE = "Car Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Car-Finder";
+				PRODUCT_BUNDLE_IDENTIFIER = com.harloch.carfinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5ce56484-a911-468a-92ef-8c4ff2312c89";
 			};
 			name = Debug;
 		};
@@ -354,12 +353,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dustin Allen (A6CL8S5GN8)";
 				INFOPLIST_FILE = "Car Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Car-Finder";
+				PRODUCT_BUNDLE_IDENTIFIER = com.harloch.carfinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5ce56484-a911-468a-92ef-8c4ff2312c89";
 			};
 			name = Release;
 		};
