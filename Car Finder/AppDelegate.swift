@@ -69,6 +69,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //NSUserDefaults.standardUserDefaults().setObject("52d9e86e01f61fbb684ffa8aeb1da3b7322d20342b0ec8b5a49c2052be947e2e", forKey: "deviceToken")
         //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
         
+        print("current settings \(UIApplication.sharedApplication().currentUserNotificationSettings()) and \(UIApplication.sharedApplication().isRegisteredForRemoteNotifications())")
+        
         return true
     }
 

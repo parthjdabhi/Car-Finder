@@ -129,6 +129,12 @@
 				TargetAttributes = {
 					5EFCF4631DE83F990037CB0E = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 9Q94NLSC93;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -337,13 +343,13 @@
 			baseConfigurationReference = 8007953D9D9AC70C97650DDF /* Pods-Car Finder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dustin Allen (A6CL8S5GN8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dustin Allen (A6CL8S5GN8)";
 				INFOPLIST_FILE = "Car Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harloch.carfinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5ce56484-a911-468a-92ef-8c4ff2312c89";
+				PROVISIONING_PROFILE = "d1259993-c167-467d-b850-c73aaa41e880";
 			};
 			name = Debug;
 		};
@@ -352,13 +358,13 @@
 			baseConfigurationReference = 8492B3241DEECABF8733AADB /* Pods-Car Finder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dustin Allen (A6CL8S5GN8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dustin Allen (A6CL8S5GN8)";
 				INFOPLIST_FILE = "Car Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harloch.carfinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5ce56484-a911-468a-92ef-8c4ff2312c89";
+				PROVISIONING_PROFILE = "d1259993-c167-467d-b850-c73aaa41e880";
 			};
 			name = Release;
 		};
