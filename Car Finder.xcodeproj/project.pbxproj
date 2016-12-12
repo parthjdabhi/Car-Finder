@@ -349,7 +349,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harloch.carfinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d1259993-c167-467d-b850-c73aaa41e880";
+				PROVISIONING_PROFILE = "50bfa420-d0d4-4679-b5f4-7608e46b054b";
 			};
 			name = Debug;
 		};
@@ -364,7 +364,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harloch.carfinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d1259993-c167-467d-b850-c73aaa41e880";
+				PROVISIONING_PROFILE = "50bfa420-d0d4-4679-b5f4-7608e46b054b";
 			};
 			name = Release;
 		};
