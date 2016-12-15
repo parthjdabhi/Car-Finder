@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+        
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -123,6 +123,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         
         print("didFailToRegisterForRemoteNotificationsWithError" , error)
+        
+        let alert=UIAlertController(title: "Message", message: "Fail To Register with reason \(error.description)", preferredStyle: .Alert);
+        alert.addAction(UIAlertAction(title: "Okay", style: .Destructive, handler: nil));
+        UIApplication.topViewController()?.presentViewController(alert, animated: true, completion: nil)
         
         NSUserDefaults.standardUserDefaults().removeObjectForKey("deviceToken")
         NSUserDefaults.standardUserDefaults().synchronize()
